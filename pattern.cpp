@@ -1,22 +1,23 @@
 #include<iostream>
+#include<conio.h>
 using namespace std;
 int main()
 {
-	int i,j;
-	char k='A';
-	for(i=1;i<=6;i++)
-	{
-		for(j=1;j<=6;j++)
-		{
-			if(i==1||i==6||j==1||j==6)
-			{
-			 cout<<k;
-			 k++;
-			}
-			else
-			cout<<"$";
-		}
-		cout<<endl;
-	}
-	return 0;
+  int i,j;
+  char k;
+  for(i=1;i<=7;i++)
+  {
+  	k='A';
+    for(j=1;j<=13;j++)
+      if(j<=8-i || j>=6+i)
+    {
+      cout<<k;
+      j<7?k++:k--;
+    }
+    else
+      cout<<" ";
+      cout<<endl;
+  }
+  cout<<endl;
 }
+
